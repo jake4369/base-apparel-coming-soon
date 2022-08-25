@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  background: #f2f2f2;
+}
+
+/* ========== 
+ TYPOGRAPHY
+ ========== */
+h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  line-height: 2.625rem;
+  letter-spacing: 10.8254px;
+  text-transform: uppercase;
+  color: #423a3a;
+  margin-bottom: 16px;
+}
+
+h1 span.highlighted-text {
+  font-weight: 300;
+  color: #ce9898;
+}
+
+p {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  color: #ce9898;
+  margin-bottom: 32px;
+}
+
+/* ========== 
+ FORM
+ ========== */
+form {
+  width: 100%;
+  height: 48px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  height: 48px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: #423a3a;
+  padding: 11px 0 9px 24px;
+  border: 1px solid #ce9898;
+  border-radius: 28px;
+  outline: unset;
+}
+
+input::placeholder {
+  color: #ce9898;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 48px;
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8b8b 100%);
+  box-shadow: 0px 15px 20px rgba(198, 110, 110, 0.247569);
+  border: unset;
+  border-radius: 28px;
+  outline: unset;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.error-label {
+  display: none;
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 0.813rem;
+  color: #f96464;
+  position: absolute;
+  top: 56px;
+  left: 24px;
+}
+
+.img-error {
+  display: none;
+  position: absolute;
+  top: 13px;
+  right: 72px;
+}
+
+/* ========== 
+ LAYOUT
+ ========== */
+.container {
+  text-align: center;
+  max-width: 450px;
+  margin: 0 auto;
+  background: linear-gradient(150.03deg, #ffffff 0%, #fff4f4 84.51%);
+}
+
+header {
+  padding: 31px 0 32.11px 32px;
+  text-align: left;
+}
+
+.img-logo {
+  width: 100px;
+}
+
+.img-logo-desktop {
+  display: none;
+}
+
+.img-container {
+  width: 100%;
+  padding-top: 66.6666%;
+  background-image: url("images/hero-mobile.jpg");
+  background-size: cover;
+}
+
+main {
+  padding: 64px 32px 92px;
+}
+
+/* ========== 
+ MEDIA QUERIES
+ ========== */
+@media (min-width: 1200px) {
+  /* ========== 
+ TYPOGRAPHY
+ ========== */
+  h1 {
+    font-size: 4rem;
+    line-height: 4.438rem;
+    letter-spacing: 17.3206px;
+    margin-bottom: 32px;
+  }
+
+  h1 span.highlighted-text {
+    font-weight: 300;
+    line-height: 4rem;
+    color: #ce9898;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 40px;
+  }
+
+  /* ========== 
+   FORM
+   ========== */
+  form {
+    height: 56px;
+  }
+
+  input {
+    height: 56px;
+    font-size: 1rem;
+    padding: 15px 0 13px 32px;
+  }
+
+  button {
+    width: 100px;
+    height: 56px;
+  }
+
+  button:hover {
+    /* background: rgb(243, 200, 200); */
+    box-shadow: -2px 15px 10px rgba(198, 110, 110, 0.247569);
+    transform: translateX(2px);
+  }
+
+  .error-label {
+    line-height: 1.75rem;
+    top: 65px;
+    left: 32px;
+  }
+
+  .img-error {
+    top: 17px;
+    right: 116px;
+  }
+
+  /* ========== 
+   LAYOUT
+   ========== */
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 57.6389% 42.3611%;
+    grid-template-rows: 100%;
+    overflow-y: hidden;
+    background-image: url("images/bg-pattern-desktop.svg");
+  }
+
+  header {
+    padding: 31px 0 32.11px 32px;
+    text-align: left;
+  }
+
+  .img-logo {
+    display: none;
+  }
+
+  .img-logo-desktop {
+    display: block;
+    width: 158px;
+    margin-bottom: 136.74px;
+  }
+
+  .img-container {
+    width: 100%;
+    padding-top: 100%;
+    height: 100%;
+    background-image: url("images/hero-desktop.jpg");
+    background-size: cover;
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  main {
+    text-align: left;
+    grid-row-start: 1;
+    width: 445px;
+    margin: 0 auto;
+  }
+}
