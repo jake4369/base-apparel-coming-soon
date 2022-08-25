@@ -239,6 +239,7 @@ main {
     text-align: left;
     grid-row-start: 1;
     width: 445px;
-    margin: 0 auto;
+    margin: 74px auto 0 19.8795%;
+    padding: 0;
   }
 }
